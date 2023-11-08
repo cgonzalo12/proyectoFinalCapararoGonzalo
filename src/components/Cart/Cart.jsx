@@ -41,9 +41,16 @@ const Cart = () => {
           </Button>
         )}
         {cart.length > 0 && (
-          <h4 className="font-weight-bold">
-            total de la compra ${totalPrecio}
-          </h4>
+          <NavLink
+            to={"/checkout"}
+            className="btn btn-dark d-flex justify-content-center m-2"
+            key={1}
+          >
+            Terminar Compra
+          </NavLink>
+        )}
+        {cart.length > 0 && (
+          <h4 className="font-weight-bold">total ${totalPrecio}</h4>
         )}
       </div>
     </>

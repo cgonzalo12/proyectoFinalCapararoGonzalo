@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 
 import PropTypes from "prop-types";
 
@@ -27,7 +26,7 @@ const Item = ({ id, nombre, img, precio }) => {
               Precio: $ {precio} <br />
               Codigo de producto: {id}
             </Card.Text>
-            <Button variant="dark">Comprar</Button>
+            {/* <Button variant="dark">Comprar</Button> */}
             {/* <Button variant="dark" className="m-2" onClick={onClickDetalle}>
               Vista Rapida
             </Button> */}
