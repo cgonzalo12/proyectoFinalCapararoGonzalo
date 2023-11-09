@@ -40,37 +40,50 @@ const AddCompraForm = () => {
   }
 
   return (
-    <form onSubmit={handleComprar}>
-      <div>
-        <label htmlFor="">Nombre</label>
-        <input
-          className="form-control"
-          type="text"
-          name="nombre"
-          value={datos.nombre}
-          onChange={(e) => setDatos({ ...datos, nombre: e.target.value })}
-        ></input>
+    <>
+      <div className="container ">
+        <form onSubmit={handleComprar} className="row g-3 align-items-center">
+          <h1 className="main-title">Complete sus datos</h1>
+
+          <div className="mb-3 ">
+            <label className="form-label">Nombre</label>
+            <input
+              className="form-control"
+              type="text"
+              name="nombre"
+              value={datos.nombre}
+              placeholder="ingrese su nombre"
+              onChange={(e) => setDatos({ ...datos, nombre: e.target.value })}
+            ></input>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              className="form-control"
+              type="email"
+              name="email"
+              placeholder="ingrese su email"
+              value={datos.email}
+              onChange={(e) => setDatos({ ...datos, email: e.target.value })}
+            ></input>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Telefono</label>
+            <input
+              className="form-control"
+              type="number"
+              name="telefono"
+              value={datos.telefono}
+              placeholder="ingrese su telefono"
+              onChange={(e) => setDatos({ ...datos, telefono: e.target.value })}
+            ></input>
+          </div>
+          <button type="submit" className="btn btn-dark">
+            Enviar
+          </button>
+        </form>
       </div>
-      <div>
-        <label htmlFor="">Email</label>
-        <input
-          type="email"
-          name="email"
-          value={datos.email}
-          onChange={(e) => setDatos({ ...datos, email: e.target.value })}
-        ></input>
-      </div>
-      <div>
-        <label htmlFor="">Telefono</label>
-        <input
-          type="number"
-          name="telefono"
-          value={datos.telefono}
-          onChange={(e) => setDatos({ ...datos, telefono: e.target.value })}
-        ></input>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+    </>
   );
 };
 
